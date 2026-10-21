@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IntellectDeck - Learn. Share. Solve. Together.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>IntellectDeck</h1>
+            <p>Learn. Share. Solve. Together.</p>
+
+            <nav>
+                <a href="#notes">Notes</a>
+                <a href="#pyqs">PYQs</a>
+                <a href="#doubts">Doubts</a>
+                <a href="#upload">Upload</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <section class="hero">
+        <div class="container">
+
+            <h2>Find the Study Material You Need</h2>
+
+            <p>
+                Access notes, previous year questions and other
+                study resources for your B.Tech subjects.
+            </p>
+
+            <form>
+
+                <label for="course">Course:</label>
+
+                <select id="course" name="course">
+                    <option value="btech">B.Tech</option>
+                </select>
+
+                <label for="semester">Semester:</label>
+
+                <select id="semester" name="semester">
+                    <option value="all">All Semesters</option>
+                    <option value="1">Semester 1</option>
+                    <option value="2">Semester 2</option>
+                    <option value="3">Semester 3</option>
+                    <option value="4">Semester 4</option>
+                    <option value="5">Semester 5</option>
+                    <option value="6">Semester 6</option>
+                    <option value="7">Semester 7</option>
+                    <option value="8">Semester 8</option>
+                </select>
+
+                <label for="subject">Subject:</label>
+
+                <select id="subject" name="subject">
+                    <option value="math">Math</option>
+                    <option value="eee">EEE</option>
+                    <option value="ep">EP</option>
+                    <option value="webd">WebD</option>
+                    <option value="computer-programming">
+                        Computer Programming
+                    </option>
+                    <option value="english">English</option>
+                </select>
+
+                <button type="submit">Browse Notes</button>
+
+            </form>
+
+        </div>
+    </section>
+
+
+    <section id="notes">
+
+        <div class="container">
+
+            <h2>Notes</h2>
+
+            <p>Find notes subject-wise.</p>
+
+            <div class="subjects">
+
+                <button class="subject-card" type="button">
+                    <h3>Math</h3>
+                    <p>Mathematics notes and study material.</p>
+                    <span>View Notes</span>
+                </button>
+
+                <button class="subject-card" type="button">
+                    <h3>EEE</h3>
+                    <p>Electrical and Electronics Engineering notes.</p>
+                    <span>View Notes</span>
+                </button>
+
+                <button class="subject-card" type="button">
+                    <h3>EP</h3>
+                    <p>Engineering Physics notes and study material.</p>
+                    <span>View Notes</span>
+                </button>
+
+                <button class="subject-card" type="button">
+                    <h3>WebD</h3>
+                    <p>Web Development notes and study material.</p>
+                    <span>View Notes</span>
+                </button>
+
+                <button class="subject-card" type="button">
+                    <h3>Computer Programming</h3>
+                    <p>Programming concepts and study material.</p>
+                    <span>View Notes</span>
+                </button>
+
+                <button class="subject-card" type="button">
+                    <h3>English</h3>
+                    <p>English notes and study material.</p>
+                    <span>View Notes</span>
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="pyqs">
+
+        <div class="container">
+
+            <h2>Previous Year Questions</h2>
+
+            <p>Practice previous year questions subject-wise.</p>
+
+            <div class="subjects">
+
+                <a class="subject-card pyq-card" href="math-pyqs.html">
+                    <h3>Math</h3>
+                    <p>Previous year questions for Mathematics.</p>
+                    <span>View PYQs</span>
+                </a>
+
+                <a class="subject-card pyq-card" href="eee-pyqs.html">
+                    <h3>EEE</h3>
+                    <p>Previous year questions for EEE.</p>
+                    <span>View PYQs</span>
+                </a>
+
+                <a class="subject-card pyq-card" href="ep-pyqs.html">
+                    <h3>EP</h3>
+                    <p>Previous year questions for Engineering Physics.</p>
+                    <span>View PYQs</span>
+                </a>
+
+                <a class="subject-card pyq-card" href="webd-pyqs.html">
+                    <h3>WebD</h3>
+                    <p>Previous year questions for Web Development.</p>
+                    <span>View PYQs</span>
+                </a>
+
+                <a class="subject-card pyq-card" href="computer-programming-pyqs.html">
+                    <h3>Computer Programming</h3>
+                    <p>Previous year questions for Computer Programming.</p>
+                    <span>View PYQs</span>
+                </a>
+
+                <a class="subject-card pyq-card" href="english-pyqs.html">
+                    <h3>English</h3>
+                    <p>Previous year questions for English.</p>
+                    <span>View PYQs</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="doubts">
+
+        <div class="container">
+
+            <h2>Doubt Forum</h2>
+
+            <p>
+                Have a question? Ask your doubt and get help
+                from other students.
+            </p>
+
+            <a href="#" class="button">Ask a Doubt</a>
+
+        </div>
+
+    </section>
+
+
+    <section id="upload">
+
+        <div class="container">
+
+            <h2>Upload Notes</h2>
+
+            <p>
+                Share your notes and study material with other students.
+            </p>
+
+            <form>
+
+                <label for="file">Select a file:</label>
+
+                <input type="file" id="file" name="file">
+
+                <button type="submit">Upload Notes</button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <div class="container">
+
+            <h3>IntellectDeck</h3>
+
+            <p>Learn. Share. Solve. Together.</p>
+
+            <p>
+                &copy; 2026 IntellectDeck. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
