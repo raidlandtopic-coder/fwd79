@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doubt Forum - IntellectDeck</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>IntellectDeck</h1>
+            <p>B.Tech Study Resources</p>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="notes.html">Notes</a>
+                <a href="pyqs.html">PYQs</a>
+                <a href="doubts.html">Doubts</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="intro">
+                <h2>Doubt Forum</h2>
+                <p>Write your question below so it is clear what you need help with.</p>
+            </div>
+
+            <form action="#" method="post">
+                <label for="student-name">Your Name</label>
+                <input type="text" id="student-name" name="student-name" placeholder="Enter your name" required>
+
+                <label for="subject">Subject</label>
+                <select id="subject" name="subject" required>
+                    <option value="">Choose a subject</option>
+                    <option value="math">Math</option>
+                    <option value="eee">EEE</option>
+                    <option value="ep">EP</option>
+                    <option value="webd">WebD</option>
+                    <option value="computer-programming">Computer Programming</option>
+                    <option value="english">English</option>
+                </select>
+
+                <label for="doubt-title">Question Title</label>
+                <input type="text" id="doubt-title" name="doubt-title" placeholder="Enter a short title" required>
+
+                <label for="doubt-details">Describe Your Doubt</label>
+                <textarea id="doubt-details" name="doubt-details" placeholder="Explain your question here" required></textarea>
+
+                <button type="submit">Submit Doubt</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <h3>IntellectDeck</h3>
+            <p>B.Tech Study Resources</p>
+        </div>
+    </footer>
+</body>
+</html>
