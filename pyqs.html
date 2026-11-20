@@ -1,32 +1,179 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>IntellectDeck | PYQs</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
+    <script src="pyqs.js" defer></script>
 </head>
+
 <body>
-    <header><div class="container">
-        <h1>IntellectDeck</h1><p>B.Tech Study Resources</p>
-        <nav>
-            <a href="index.html">Home</a><a href="subjects.html">Subjects</a>
-            <a class="active" href="pyqs.html">PYQs</a><a href="doubts.html">Doubts</a>
-            <a href="upload.html">Upload</a><a href="login.html">Login</a>
-        </nav>
-    </div></header>
-    <main class="container section">
-        <h2>Previous Year Questions</h2>
-        <p>Choose a subject to view its previous year question papers.</p>
-        <div class="card-grid">
-            <a class="card" href="subject.html?name=Math"><h3>Math PYQs</h3><p>Open Math resources</p><span>View papers →</span></a>
-            <a class="card" href="subject.html?name=EEE"><h3>EEE PYQs</h3><p>Open EEE resources</p><span>View papers →</span></a>
-            <a class="card" href="subject.html?name=EP"><h3>EP PYQs</h3><p>Open EP resources</p><span>View papers →</span></a>
-            <a class="card" href="subject.html?name=WebD"><h3>WebD PYQs</h3><p>Open WebD resources</p><span>View papers →</span></a>
-            <a class="card" href="subject.html?name=Computer%20Programming"><h3>Computer Programming PYQs</h3><p>Open programming resources</p><span>View papers →</span></a>
-            <a class="card" href="subject.html?name=English"><h3>English PYQs</h3><p>Open English resources</p><span>View papers →</span></a>
+
+    <!-- HEADER -->
+
+    <header>
+        <div class="container">
+
+            <h1>IntellectDeck</h1>
+            <p>B.Tech Study Resources</p>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="subjects.html">Subjects</a>
+                <a class="active" href="pyqs.html">PYQs</a>
+                <a href="doubts.html">Doubts</a>
+                <a href="upload.html">Upload</a>
+                <a href="login.html">Login</a>
+            </nav>
+
         </div>
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="container section">
+
+        <h2>Previous Year Question Papers</h2>
+
+        <p>
+            Find and share previous year question papers
+            to prepare better for your examinations.
+        </p>
+
+
+        <!-- UPLOAD PYQ FORM -->
+
+        <section class="form-panel">
+
+            <h2>Upload a Question Paper</h2>
+
+            <form id="pyq-form" enctype="multipart/form-data">
+
+                <label for="pyq-subject">Subject</label>
+
+                <select id="pyq-subject" name="subject" required>
+
+                    <option value="">Choose a subject</option>
+
+                    <option>Math</option>
+                    <option>EEE</option>
+                    <option>EP</option>
+                    <option>WebD</option>
+                    <option>Computer Programming</option>
+                    <option>English</option>
+
+                </select>
+
+
+                <label for="pyq-year">Exam Year</label>
+
+                <input
+                    type="number"
+                    id="pyq-year"
+                    name="year"
+                    placeholder="Enter exam year"
+                    min="2000"
+                    max="2099"
+                    required
+                >
+
+
+                <label for="pyq-title">Paper Title</label>
+
+                <input
+                    type="text"
+                    id="pyq-title"
+                    name="title"
+                    placeholder="e.g. Mathematics End Semester"
+                    required
+                >
+
+
+                <label for="pyq-file">Choose Question Paper</label>
+
+                <input
+                    type="file"
+                    id="pyq-file"
+                    name="pyqFile"
+                    accept=".pdf,.doc,.docx,.ppt,.pptx"
+                    required
+                >
+
+
+                <button type="submit">
+                    Upload PYQ
+                </button>
+
+                <p id="pyq-message" class="form-message"></p>
+
+            </form>
+
+        </section>
+
+
+        <!-- AVAILABLE PYQS -->
+
+        
+<section class="resources-section">
+
+    <h2>Available Question Papers</h2>
+
+    <label for="subject-filter">Filter by Subject:</label>
+
+    <select id="subject-filter">
+        <option value="All">All Subjects</option>
+        <option value="Math">Math</option>
+        <option value="EEE">EEE</option>
+        <option value="EP">EP</option>
+        <option value="WebD">WebD</option>
+        <option value="Computer Programming">Computer Programming</option>
+        <option value="English">English</option>
+    </select>
+
+    <label for="year-filter">Filter by Year:</label>
+
+    <select id="year-filter">
+        <option value="All">All Years</option>
+    </select>
+
+    <label for="pyq-search">Search by Paper Title:</label>
+
+    <input
+        type="text"
+        id="pyq-search"
+        placeholder="Search question papers..."
+    >
+
+    <div id="pyq-container">
+        <p>Loading question papers...</p>
+    </div>
+
+</section>
+
+
     </main>
-    <footer><div class="container"><p>© 2026 IntellectDeck</p></div></footer>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="container">
+
+            <p>© 2026 IntellectDeck</p>
+
+        </div>
+
+    </footer>
+
 </body>
+
 </html>

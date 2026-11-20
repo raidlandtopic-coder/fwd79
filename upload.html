@@ -1,41 +1,100 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IntellectDeck | Upload</title>
+
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <script src="upload.js" defer></script>
 </head>
+
 <body>
-    <header><div class="container">
-        <h1>IntellectDeck</h1><p>B.Tech Study Resources</p>
-        <nav>
-            <a href="index.html">Home</a><a href="subjects.html">Subjects</a>
-            <a href="pyqs.html">PYQs</a><a href="doubts.html">Doubts</a>
-            <a class="active" href="upload.html">Upload</a><a href="login.html">Login</a>
-        </nav>
-    </div></header>
+
+    <header>
+        <div class="container">
+            <h1>IntellectDeck</h1>
+            <p>B.Tech Study Resources</p>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="subjects.html">Subjects</a>
+                <a href="pyqs.html">PYQs</a>
+                <a href="doubts.html">Doubts</a>
+                <a class="active" href="upload.html">Upload</a>
+                <a href="login.html">Login</a>
+            </nav>
+        </div>
+    </header>
+
     <main class="container section">
+
         <h2>Upload Study Materials</h2>
         <p>Share useful notes or question papers with other students.</p>
-        <form class="form-panel demo-form">
+
+        <form class="form-panel" id="upload-form" enctype="multipart/form-data">
+
             <label for="upload-name">Your Name</label>
-            <input id="upload-name" type="text" placeholder="Enter your name" required>
+            <input
+                id="upload-name"
+                name="name"
+                type="text"
+                placeholder="Enter your name"
+                required
+            >
+
             <label for="upload-subject">Subject</label>
-            <select id="upload-subject" required>
+            <select id="upload-subject" name="subject" required>
                 <option value="">Choose a subject</option>
-                <option>Math</option><option>EEE</option><option>EP</option>
-                <option>WebD</option><option>Computer Programming</option><option>English</option>
+                <option>Math</option>
+                <option>EEE</option>
+                <option>EP</option>
+                <option>WebD</option>
+                <option>Computer Programming</option>
+                <option>English</option>
             </select>
+
             <label for="resource-title">Resource Title</label>
-            <input id="resource-title" type="text" placeholder="e.g. Unit 1 Notes" required>
+            <input
+                id="resource-title"
+                name="title"
+                type="text"
+                placeholder="e.g. Unit 1 Notes"
+                required
+            >
+
             <label for="resource-file">Choose a file</label>
-            <input id="resource-file" type="file" accept=".pdf,.doc,.docx,.ppt,.pptx" required>
+            <input
+                id="resource-file"
+                name="resourceFile"
+                type="file"
+                accept=".pdf,.doc,.docx,.ppt,.pptx"
+                required
+            >
+
             <button type="submit">Submit Resource</button>
-            <p class="form-message" aria-live="polite"></p>
+
+            <p class="form-message" id="upload-message" aria-live="polite"></p>
+
         </form>
+        <section class="resources-section">
+    <h2>Available Study Materials</h2>
+
+    <div id="resources-container">
+        <p>Loading resources...</p>
+    </div>
+</section>
+
+
     </main>
-    <footer><div class="container"><p>© 2026 IntellectDeck</p></div></footer>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 IntellectDeck</p>
+        </div>
+    </footer>
+
 </body>
 </html>
