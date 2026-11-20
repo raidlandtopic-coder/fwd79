@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,36 +7,92 @@
     <title>IntellectDeck | Doubts</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <script src="doubts.js" defer></script>
 </head>
 <body>
-    <header><div class="container">
-        <h1>IntellectDeck</h1><p>B.Tech Study Resources</p>
-        <nav>
-            <a href="index.html">Home</a><a href="subjects.html">Subjects</a>
-            <a href="pyqs.html">PYQs</a><a class="active" href="doubts.html">Doubts</a>
-            <a href="upload.html">Upload</a><a href="login.html">Login</a>
-        </nav>
-    </div></header>
+    <header>
+        <div class="container">
+            <h1>IntellectDeck</h1>
+            <p>B.Tech Study Resources</p>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="subjects.html">Subjects</a>
+                <a href="pyqs.html">PYQs</a>
+                <a class="active" href="doubts.html">Doubts</a>
+                <a href="upload.html">Upload</a>
+                <a href="login.html">Login</a>
+            </nav>
+        </div>
+    </header>
+
     <main class="container section">
+
         <h2>Doubt Forum</h2>
-        <p>Write your question below so it is clear what you need help with.</p>
-        <form class="form-panel demo-form">
+        <p>Have a question? Share it with other students and get help.</p>
+
+        <form class="form-panel" id="doubt-form">
+
             <label for="doubt-name">Your Name</label>
-            <input type="text" id="doubt-name" placeholder="Enter your name" required>
+            <input type="text" id="doubt-name" name="name"
+                   placeholder="Enter your name" required>
+
             <label for="doubt-subject">Subject</label>
-            <select id="doubt-subject" required>
+            <select id="doubt-subject" name="subject" required>
                 <option value="">Choose a subject</option>
-                <option>Math</option><option>EEE</option><option>EP</option>
-                <option>WebD</option><option>Computer Programming</option><option>English</option>
+                <option>Math</option>
+                <option>EEE</option>
+                <option>EP</option>
+                <option>WebD</option>
+                <option>Computer Programming</option>
+                <option>English</option>
             </select>
+
             <label for="doubt-title">Question Title</label>
-            <input type="text" id="doubt-title" placeholder="Enter a short title" required>
+            <input type="text" id="doubt-title" name="title"
+                   placeholder="Enter a short title" required>
+
             <label for="doubt-description">Describe Your Doubt</label>
-            <textarea id="doubt-description" rows="5" placeholder="Explain your question here" required></textarea>
+            <textarea id="doubt-description" name="question"
+                      rows="5" placeholder="Explain your question here"
+                      required></textarea>
+
             <button type="submit">Submit Doubt</button>
-            <p class="form-message" aria-live="polite"></p>
+
+            <p class="form-message" id="doubt-message" aria-live="polite"></p>
+
         </form>
+
+        <section class="doubts-list">
+
+            <h2>Recent Doubts</h2>
+
+            <label for="doubt-filter">Filter by Subject</label>
+            <select id="doubt-filter">
+                <option value="All">All Subjects</option>
+                <option>Math</option>
+                <option>EEE</option>
+                <option>EP</option>
+                <option>WebD</option>
+                <option>Computer Programming</option>
+                <option>English</option>
+            </select>
+
+            <label for="doubt-search">Search Doubts</label>
+            <input type="text" id="doubt-search"
+                   placeholder="Search by question title">
+
+            <div id="doubts-container">
+                <p>Loading doubts...</p>
+            </div>
+
+        </section>
+
     </main>
-    <footer><div class="container"><p>© 2026 IntellectDeck</p></div></footer>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 IntellectDeck</p>
+        </div>
+    </footer>
 </body>
 </html>
