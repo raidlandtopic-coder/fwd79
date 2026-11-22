@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,30 +7,126 @@
     <title>IntellectDeck | Login</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <script src="login.js" defer></script>
 </head>
 <body>
-    <header><div class="container">
-        <h1>IntellectDeck</h1><p>B.Tech Study Resources</p>
-        <nav>
-            <a href="index.html">Home</a><a href="subjects.html">Subjects</a>
-            <a href="pyqs.html">PYQs</a><a href="doubts.html">Doubts</a>
-            <a href="upload.html">Upload</a><a class="active" href="login.html">Login</a>
-        </nav>
-    </div></header>
+
+    <header>
+        <div class="container">
+            <h1>IntellectDeck</h1>
+            <p>B.Tech Study Resources</p>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="subjects.html">Subjects</a>
+                <a href="pyqs.html">PYQs</a>
+                <a href="doubts.html">Doubts</a>
+                <a href="upload.html">Upload</a>
+                <a class="active" href="login.html">Login</a>
+            </nav>
+        </div>
+    </header>
+
     <main class="login-section">
         <div class="login-container">
-            <h2>Welcome Back!</h2>
-            <p>Login to access your study resources.</p>
-            <form class="demo-form">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" placeholder="Enter your email" required>
-                <label for="password">Password</label>
-                <input type="password" id="password" placeholder="Enter your password" required>
+
+            <h2 id="form-heading">Welcome Back!</h2>
+            <p id="form-description">Login to access your study resources.</p>
+
+            <div class="auth-tabs">
+                <button type="button" id="login-tab" class="auth-tab active">
+                    Login
+                </button>
+
+                <button type="button" id="register-tab" class="auth-tab">
+                    Register
+                </button>
+            </div>
+
+            <form id="login-form">
+
+                <label for="login-email">Email Address</label>
+                <input
+                    type="email"
+                    id="login-email"
+                    placeholder="Enter your email"
+                    autocomplete="email"
+                    required
+                >
+
+                <label for="login-password">Password</label>
+                <input
+                    type="password"
+                    id="login-password"
+                    placeholder="Enter your password"
+                    autocomplete="current-password"
+                    required
+                >
+
                 <button type="submit">Login</button>
-                <p class="form-message" aria-live="polite"></p>
+
             </form>
+
+            <form id="register-form" class="hidden">
+
+                <label for="register-name">Full Name</label>
+                <input
+                    type="text"
+                    id="register-name"
+                    placeholder="Enter your name"
+                    autocomplete="name"
+                    required
+                >
+
+                <label for="register-email">Email Address</label>
+                <input
+                    type="email"
+                    id="register-email"
+                    placeholder="Enter your email"
+                    autocomplete="email"
+                    required
+                >
+
+                <label for="register-password">Password</label>
+                <input
+                    type="password"
+                    id="register-password"
+                    placeholder="Create a password (at least 8 characters)"
+                    autocomplete="new-password"
+                    minlength="8"
+                    required
+                >
+
+                <label for="confirm-password">Confirm Password</label>
+                <input
+                    type="password"
+                    id="confirm-password"
+                    placeholder="Enter your password again"
+                    autocomplete="new-password"
+                    minlength="8"
+                    required
+                >
+
+                <button type="submit">Create Account</button>
+
+            </form>
+
+            <p class="form-message" id="auth-message" aria-live="polite"></p>
+
+            <div id="account-section" class="hidden">
+                <h3 id="account-name"></h3>
+                <p>You are logged in to IntellectDeck.</p>
+                <button type="button" id="logout-button">Logout</button>
+            </div>
+
         </div>
     </main>
-    <footer><div class="container"><p>© 2026 IntellectDeck</p></div></footer>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 IntellectDeck</p>
+        </div>
+    </footer>
+
 </body>
 </html>
