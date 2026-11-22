@@ -412,3 +412,41 @@ footer {
 .doubt-card p {
     margin: 10px 0;
 }
+
+/* LOGIN AND REGISTRATION */
+
+.auth-tabs {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.auth-tabs button {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #222;
+    background-color: white;
+    color: #222;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.auth-tabs button.active {
+    background-color: #222;
+    color: white;
+}
+
+.login-container .hidden {
+    display: none;
+}
+
+#account-section {
+    margin-top: 25px;
+    padding: 20px;
+    border: 1px solid #222;
+    border-radius: 8px;
+}
+
+#logout-button {
+    margin-top: 15px;
+}
